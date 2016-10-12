@@ -89,7 +89,6 @@ class window:
         self.label_recv = Label(self.dlg, text='recv')
         self.label_recv.pack()
 
-        # self.txt_box_recv = scrollTxtArea(self.dlg)
         self.txt_box_recv = Text(self.dlg)
         self.txt_box_recv.pack()
 
@@ -111,8 +110,7 @@ class window:
         self.button_quit.pack(fill=X)
 
         """socket setup"""
-        self.s = socket(AF_INET, SOCK_DGRAM)
-        # self.s.setblocking(False)
+        self.s = socket(AF_INET, SOCK_DGRAM)  # self.s.setblocking(False)
         self.s.settimeout(0.1)
 
         host = ""
